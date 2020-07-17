@@ -3,8 +3,8 @@
 
 function feetToMile(feet){
     //checking if input is valid
-    if (feet <= 0){
-        //if not valid than achkwoledging 
+    if (feet <= 0 && isNaN(feet) === true){
+        //if not valid than achkwoledging the user
         console.log("invalid input");
     }
     // if input is valid than executing the main program
@@ -48,7 +48,8 @@ function woodCalculator(chair, table, bed){
 // function for brickCalculator problem
 
 function brickCalculator(buidingStories){
-    if (buidingStories > 0){
+    //checking if input is valid
+    if (buidingStories > 0 && typeof(buidingStories) === 'number'){
         //variable for brick per feet
         var brickPerFeet = 1000;
         //variable for every story in 1 to 10 
@@ -85,17 +86,27 @@ function brickCalculator(buidingStories){
             return bricksNeeded;
         }
     }
+    //if not valid than achkwoledging the user
     else{
         console.log("invalid input");
     }
     
 }
 
+
+
+//function for tinyFriend problem
 function tinyFriend(friendsNames){
+    //variable to return
     var tinyname = friendsNames[0];
+    //checking if input is valid
     if (friendsNames.length > 0){
+        //loop for checking the array
         for ( var iterater = 1; iterater < friendsNames.length; iterater++){
+            //names that are going to be iterated
             var iterableName = friendsNames[iterater];
+            //if iterable name's length is smaller than 
+            //the current tiny name than switching the tiny name
             if ( iterableName.length < tinyname.length ){
                 tinyname = iterableName;
             }
@@ -103,10 +114,10 @@ function tinyFriend(friendsNames){
         }
         return tinyname;
     }
+    //if not valid than achkwoledging the user
     else{
         console.log("give some input");
     }
 }
 
-var testvar = tinyFriend([])
-console.log(testvar);
+
