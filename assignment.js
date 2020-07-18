@@ -81,7 +81,7 @@ function brickCalculator(buidingStories){
         else if (buidingStories > 20){
             
             minusStories = buidingStories - 20;
-            bricksNeeded = oneToTenStoryBricks + (20 * 12 * brickPerFeet) + (minusStories * 20 * brickPerFeet);
+            bricksNeeded = oneToTenStoryBricks + (20 * 12 * brickPerFeet) + (minusStories * 10 * brickPerFeet);
             //returning bricksneeded
             return bricksNeeded;
         }
